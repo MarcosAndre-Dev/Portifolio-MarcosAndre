@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Portifólio</title>
+</head>
+<body>
+
+    <div class="particulas"></div>
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu-link">Inicio</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#contatos" class="menu-link">Contato</a>
+            </li>
+
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+        <div>
+            <img src="./img/eu1.jpeg" alt="Foto do Marcos" class="foto-perfil">
+            <h1>Marcos André</h1>
+            <p class="cabecalho-sub-titulo">Desenvolvedor</p>
+        </div>
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">
+            Sobre mim
+        </h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">
+    Sou estudante de Análise e Desenvolvimento de Sistemas, em constante evolução profissional, com foco em me tornar um Desenvolvedor de Sistemas.
+    Atuo no desenvolvimento de projetos utilizando C#, aplicando conceitos de programação orientada a objetos (POO), como encapsulamento, herança e polimorfismo,
+    além de boas práticas de organização e manutenção de código. Possuo experiência na criação de aplicações de console e aplicações desktop,
+     bem como no desenvolvimento de sistemas com integração a bancos de dados, realizando operações de CRUD, modelagem de dados e escrita de consultas SQL.
+      Em meus projetos, aplico versionamento de código com Git e GitHub, garantindo controle de versões e colaboração eficiente.
+    Também tenho contato com o desenvolvimento front-end, utilizando HTML e CSS, o que me permite compreender o fluxo completo de uma aplicação, do back-end à 
+    interface do usuário. Busco constantemente aprimorar meus conhecimentos em C# e .NET, explorando novas tecnologias, padrões de projeto e boas práticas de 
+    desenvolvimento de software, sempre com foco em desempenho, qualidade e aprendizado contínuo.
+            </p>
+        </div>
+    </section>
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-caixa">
+            <div class="projetos-card">
+                <img src="./img/Locadora.png" alt="Projeto-1" class="projetos-imagens">
+                <div class="caixa-paragrafos">
+                    <h3 class="info-projetos">Locadora de veículos</h3>
+                    <p class="paragrafo-projetos">Locadora moderna de veículos</p>
+                </div>
+            </div>
+            <div class="projetos-card">
+                <img src="./img/copiaMicrosoft.png" alt="Projeto-2" class="projetos-imagens">
+                <div class="caixa-paragrafos">
+                    <h3 class="info-projetos">Cópia Microsoft</h3>
+                    <p class="paragrafo-projetos">Projeto onde o objetivo foi fazer a página da microsoft</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulos">Entre em contato</h2>
+        <form class="formulario-contato" id="formulario" onsubmit="EnviarWhats(event)">
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
+            </div>
+            <div class="grupo-form">
+                <textarea placeholder="Digite sua mensagem" class="campo-form" id="mensagem"></textarea>
+            </div>
+            <button type="submit" class="botao-form">
+                Enviar via WhatsApp
+            </button>
+        </form>
+    </section>
+    
+    <script>
+
+        function EnviarWhats(event){
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '5561983187894'
+            const texto = `Olá! Me chamo ${nome}, ${mensagem}`
+            const msgFormatada = encodeURIComponent(texto)
+            const url = `https://wa.me/${telefone}?text=${msgFormatada}`
+            window.open(url, '_blank')
+        }
+    </script>
+
+</body>
+</html>
