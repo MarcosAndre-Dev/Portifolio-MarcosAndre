@@ -85,6 +85,22 @@ h1{
     padding: 6rem 2rem;
 
 }
+.botao-jogar {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    background: linear-gradient(45deg, var(--primaria), var(--secundaria));
+    color: var(--claro);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.botao-jogar:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(79,70,229,0.4);
+}
 .sobre-titulo{
     display: flex;
     justify-content: center;

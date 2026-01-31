@@ -30,7 +30,7 @@
 
     <main id="inicio" class="cabecalho">
         <div>
-            <img src="./img/eu1.jpeg" alt="Foto do Marcos" class="foto-perfil">
+            <img src="./img/eu.jpeg" alt="Foto do Marcos" class="foto-perfil">
             <h1>Marcos André</h1>
             <p class="cabecalho-sub-titulo">Desenvolvedor</p>
         </div>
@@ -57,18 +57,30 @@
         <h2 class="projetos-titulo">Meus Projetos</h2>
         <div class="projetos-caixa">
             <div class="projetos-card">
-                <img src="./img/Locadora.png" alt="Projeto-1" class="projetos-imagens">
+                <img src="./img/CapaFanta.png" alt="Projeto-1" class="projetos-imagens">
                 <div class="caixa-paragrafos">
-                    <h3 class="info-projetos">Locadora de veículos</h3>
-                    <p class="paragrafo-projetos">Locadora moderna de veículos</p>
+                    <h3 class="info-projetos">Projeto Site Fanta</h3>
+                    <p class="paragrafo-projetos">Um site para treinar minha habilidade em HTML, CSS e JavaScript.
+                        Usando a Fanta como inspiração
+                    </p>
+                    <a href="./ProjSiteFanta/index.html" class="botao-jogar">
+            Acessar projeto 🚀
+        </a>
                 </div>
             </div>
             <div class="projetos-card">
-                <img src="./img/copiaMicrosoft.png" alt="Projeto-2" class="projetos-imagens">
+                <img src="./img/CapaFlappy.png" alt="Projeto-2" class="projetos-imagens">
                 <div class="caixa-paragrafos">
-                    <h3 class="info-projetos">Cópia Microsoft</h3>
-                    <p class="paragrafo-projetos">Projeto onde o objetivo foi fazer a página da microsoft</p>
+                <h3 class="info-projetos">Flappy Bird</h3>
+                    <p class="paragrafo-projetos">
+                    Jogo desenvolvido originalmente em Java e recriado em JavaScript
+                    </p>
+                <a href="./jogo/index.html" class="botao-jogar" target="_blank" rel="noopener">
+    Jogar agora 🎮
+</a>
+
                 </div>
+
             </div>
         </div>
     </section>
@@ -88,9 +100,14 @@
         </form>
     </section>
     
+        <form class="formulario-contato" id="formulario" onsubmit="EnviarWhats(event)">
+
+
     <script>
 
         function EnviarWhats(event){
+
+            event.preventDefault();
 
             const nome = document.getElementById('nome').value;
             const mensagem = document.getElementById('mensagem').value;
